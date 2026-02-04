@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 239 84% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 239 84% 58%;
+    --radius: 0.75rem;
+    --chart-1: 239 70% 70%;
+    --chart-2: 239 75% 60%;
+    --chart-3: 239 80% 50%;
+    --chart-4: 239 83% 45%;
+    --chart-5: 239 85% 40%;
+    --sidebar: 0 0% 98%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 239 84% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 239 84% 58%;
+    
+    /* Category colors */
+    --category-food: 25 95% 53%;
+    --category-travel: 199 89% 48%;
+    --category-shopping: 280 87% 65%;
+    --category-transport: 48 96% 53%;
+    --category-entertainment: 142 76% 36%;
+    
+    /* Accent colors */
+    --neon-purple: 280 87% 65%;
+    --neon-teal: 174 72% 56%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 98%;
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 8% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 239 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 10%;
+    --input: 0 0% 100% / 15%;
+    --ring: 239 75% 60%;
+    --chart-1: 239 70% 70%;
+    --chart-2: 239 75% 60%;
+    --chart-3: 239 80% 50%;
+    --chart-4: 239 83% 45%;
+    --chart-5: 239 85% 40%;
+    --sidebar: 240 8% 12%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 239 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 100% / 10%;
+    --sidebar-ring: 239 75% 60%;
+    
+    /* Category colors - adjusted for dark mode */
+    --category-food: 25 90% 58%;
+    --category-travel: 199 84% 55%;
+    --category-shopping: 280 82% 70%;
+    --category-transport: 48 91% 58%;
+    --category-entertainment: 142 71% 45%;
+    
+    /* Accent colors */
+    --neon-purple: 280 82% 70%;
+    --neon-teal: 174 67% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Inter Variable", "Inter", system-ui, sans-serif;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-white/70 dark:bg-white/5;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-strong {
+    @apply backdrop-blur-2xl bg-white/80 dark:bg-white/10;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}
